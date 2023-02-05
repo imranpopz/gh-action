@@ -29,12 +29,5 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
 
-       - name: Checkout Recovery Compiler Repo
-         uses: actions/checkout@v2
-         with:
-           repository: PitchBlackRecoveryProject/Compiler
-           ref: production
-           token: ${{ secrets.GH_BOT_TOKEN }}
-           path: .github/actions/Compiler
        - name: Recovery Compilation
          uses: ./.github/actions/Compiler
