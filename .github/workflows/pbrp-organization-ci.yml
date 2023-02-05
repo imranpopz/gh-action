@@ -12,6 +12,7 @@ on:
         default: 'Sync Latest Source'
 
 env:
+  GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
   TARGET: "pbrp"
 
 jobs:
