@@ -30,7 +30,7 @@ jobs:
               if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
 
        - name: Recovery Compilation
-
+         uses: actions/checkout@v2
          with:
            repository: PitchBlackRecoveryProject/Compiler
            ref: production
