@@ -1,0 +1,19 @@
+name: PBRP Organization CI
+on:
+  workflow_dispatch:
+    inputs:
+      DEPLOY_TYPE:
+        description: 'Deploy Type (TEST/BETA/OFFICIAL)'
+        required: true
+        default: 'TEST'
+      ChangeLogs:
+        description: 'Build ChangeLogs'
+        required: true
+        default: 'Sync Latest Source'
+
+env:
+  TARGET: "pbrp"
+
+jobs:
+  PBRP_CI:
+    runs-on: ubuntu-20.04
