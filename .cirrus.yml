@@ -8,9 +8,9 @@ env:
     USERNAME: imranpopz
     USERMAIL: imranpopz32@gmail.com
     CR_REPO: https://github.com/PitchBlackRecoveryProject/manifest_pb.git
-    CR_BRANCH: android-12.1
+    CR_BRANCH: android-11.0
     DT_REPO: https://github.com/nebrassy/device_xiaomi_sweet-TWRP.git
-    DT_BRANCH: android-12.1
+    DT_BRANCH: android-11.0
     CIRRUS_CHANGE_TITLE: Building PithBlack Recovery for ${COMENAME} from ${OEM}
     CIRRUS_CHANGE_MESSAGE: Building PithBlack Recovery for ${COMENAME} from ${OEM}
     
