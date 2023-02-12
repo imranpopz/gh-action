@@ -21,7 +21,7 @@ jobs:
 
     steps:
 
-       - uses: actions/checkout@v3
+       - uses: actions/checkout@master
          with:
 
           persist-credentials:  false     
@@ -36,7 +36,7 @@ jobs:
         
 
        - name: Commit & Push changes
-         uses: actions-js/push@aster
+         uses: actions-js/push@master
          with:
 
            message:
