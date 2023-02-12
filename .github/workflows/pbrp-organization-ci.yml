@@ -36,10 +36,9 @@ jobs:
         
 
        - name: Commit & Push changes
-         uses: actions-js/push@v1.3
+         uses: actions-js/push@aster
          with:
-           author_email: imranpopz32@gmail.com
-           author_name: imranpopz
+
            message:
              "test"
            github_token: ${{ secrets.GITHUB_TOKEN }}
