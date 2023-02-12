@@ -30,3 +30,6 @@ jobs:
          
        - name: check for changes
          run: git status
+
+       - name: Diff changed files
+         run: git diff
