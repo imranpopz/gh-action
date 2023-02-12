@@ -38,5 +38,7 @@ jobs:
        - name: Commit & Push changes
          uses: actions-js/push@master
          with:
+           author_email: imranpopz32@gmail.com
 
-          github_token: ${{ secrets.TOKEN }}        
+           author_name: imranpopz
+           github_token: ${{ secrets.TOKEN }}        
