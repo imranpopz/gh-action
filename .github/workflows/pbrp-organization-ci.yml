@@ -23,17 +23,3 @@ jobs:
        - name: Auto Adapt Manifest
          # /* if your branch name is other than the one which you dispatched workflow from then set it manually in the place of ${GITHUB_REF##*/}" */ 
          run: echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest_pb -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
-
-       - name: Export Vars
-         run: |
-              if [[ ${BUILD_RELEASE_TYPE} == "TEST" ]]; then echo "TEST_BUILD=true"  >> $GITHUB_ENV;fi
-              if [[ ${BUILD_RELEASE_TYPE} == "BETA" ]]; then echo "BETA_BUILD=true"  >> $GITHUB_ENV;fi
-              if [[ ${BUILD_RELEASE_TYPE} == "OFFICIAL" ]]; then echo "PB_OFFICIAL=true"  >> $GITHUB_ENV;fi
-
-       - name: Recovery Compilation
-         uses: actions/checkout@v2
-         with:
-           repository: PitchBlackRecoveryProject/Compiler
-           ref: production
-           token: ${{ secrets.GH_BOT_TOKEN }}
-           uses: ./.github/actions/Compiler
