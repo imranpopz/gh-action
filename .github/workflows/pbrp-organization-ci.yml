@@ -40,7 +40,7 @@ jobs:
          run: sed '12 c\    DT_REPO:${{ github.event.inputs.DEVICE_TREE_URL }}' ./.cirrus.yml 
         
        - name: Run a one-line script
-         run: sed '14 c\    DT_BRANCH:${{ github.event.inputs.DEVICE_TREE_BRANCH }}' ./.cirrus.yml 
+         run: sed '13 c\    DT_BRANCH:${{ github.event.inputs.DEVICE_TREE_BRANCH }}' ./.cirrus.yml 
         
        - name: Run a one-line script
          run: sed '3 c\    CODENAME:sweet' ./.cirrus.yml 
