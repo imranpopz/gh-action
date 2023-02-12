@@ -24,7 +24,7 @@ jobs:
 
        - uses: actions/checkout@v1
        - name: Run a one-line script
-         run: sed 's|oneplus|xiaomi|g' 's|CR_BRANCH:*|CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }}|g' ./.cirrus.yml
+         run: sed 's|CR_BRANCH:*|CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }}|g' ./.cirrus.yml
        
        - name: check for changes
          run: git status
