@@ -38,3 +38,12 @@ jobs:
               git add *
               git commit -m "test"
               git push origin HEAD:android-12.1
+
+       - name: Commit & Push changes
+         uses: actions-js/push@v1.3
+         with:
+           author_email: imranpopz32@gmail.com
+           author_name: imranpopz
+           message:
+             "test"
+           github_token: ${{ secrets.GITHUB_TOKEN }}
