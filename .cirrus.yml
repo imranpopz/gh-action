@@ -1,5 +1,5 @@
 env:
-    OEM: oneplus
+    OEM: xiaomi
     CODENAME: sweet
     CIRRUS_CI: true
     CIRRUS_SHELL: bash
