@@ -37,8 +37,4 @@ jobs:
 
        - name: Commit & Push changes
          uses: actions-js/push@master
-         with:
-
-           message:
-             "test"
-           github_token: ${{ secrets.GITHUB_TOKEN }}
+         
