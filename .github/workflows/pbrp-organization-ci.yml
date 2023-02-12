@@ -45,9 +45,12 @@ jobs:
        - name: Run a one-line script
          run: sed '3 c\    CODENAME:sweet' ./.cirrus.yml 
         
-       - name: check for changes
-         run: git status
+       - name: check for changeschanges
+         run: |
+              git status
+              git config --global user.email "imranpopz32@gmail.com"
 
+              git config --global user.name "imranpopz"
        - name: Diff changed files
          run: git diff
 
