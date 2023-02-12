@@ -24,7 +24,7 @@ jobs:
 
        - uses: actions/checkout@v1
        - name: Run a one-line script
-         run: sed '11 c\    CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }};t;3 c\        CODENAME:sweet' ./.cirrus.yml
+         run: sed '11 c\    CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }} ./.cirrus.yml && sed '3 c\        CODENAME:sweet' ./.cirrus.yml 
         
        - name: check for changes
          run: git status
