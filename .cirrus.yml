@@ -24,10 +24,10 @@ task:
       memory: 32G
 
   SYNC_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/sync_recovery.sh | bash
       
   BUILD_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/build_recovery.sh | bash
       
   UPLOAD_SCRIPT_script:
-      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/upload.sh | bash
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/upload_recovery.sh | bash
