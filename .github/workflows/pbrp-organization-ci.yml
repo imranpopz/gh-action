@@ -50,3 +50,13 @@ jobs:
 
        - name: Diff changed files
          run: git diff
+
+       - name: Diff changed files
+
+         run: git add *
+         
+       - name: Diff changed files
+         run: git commit -m "test"
+         
+       - name: Diff changed files
+         run: git push
