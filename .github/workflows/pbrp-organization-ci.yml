@@ -23,3 +23,10 @@ jobs:
        - name: Auto Adapt Manifest
          # /* if your branch name is other than the one which you dispatched workflow from then set it manually in the place of ${GITHUB_REF##*/}" */ 
          run: echo "MANIFEST=https://github.com/PitchBlackRecoveryProject/manifest_pb -b ${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+       - uses: actions/checkout@v1
+       - name: Run a one-line script
+         run: sed -i 's/oneplus/xiaomi/g' ./.cirrus.yml
+         
+       - name: check for changes
+         run: git status
