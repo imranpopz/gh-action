@@ -21,7 +21,11 @@ jobs:
 
     steps:
 
-       - uses: actions/checkout@v1
+       - uses: actions/checkout@v3
+         with:
+
+          persist-credentials:  false     
+       
        - name: Run a one-line script
          run: |
               sed -i '11 c\    CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }}' ./.cirrus.yml
