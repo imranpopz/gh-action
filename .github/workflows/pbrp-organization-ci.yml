@@ -11,9 +11,10 @@ on:
         required: true
         default: 'Sync Latest Source'
 
-env:
-  GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
-  TARGET: "pbrp"
+      MANIFEST_BRANCH:
+        description: 'MANIFEST_BRANCH'
+        required: true
+        default: 'twrp-12.1'
 
 jobs:
   PBRP_CI:
@@ -26,7 +27,7 @@ jobs:
 
        - uses: actions/checkout@v1
        - name: Run a one-line script
-         run: sed -i 's/oneplus/xiaomi/g' ./.cirrus.yml
+         run: sed -i 's/CR_BRANCH:android-12.1/CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }}/g' ./.cirrus.yml
          
        - name: check for changes
          run: git status
