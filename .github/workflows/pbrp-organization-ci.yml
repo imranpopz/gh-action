@@ -16,6 +16,16 @@ on:
         required: true
         default: 'twrp-12.1'
 
+      DEVICE_TREE_URL:
+        description: 'DEVICE_TREE_URL'
+        required: true
+
+      DEVICE_TREE_BRANCH:
+
+        description: 'DEVICE_TREE_BRANCH'
+
+        required: true
+
 jobs:
   PBRP_CI:
     runs-on: ubuntu-20.04
@@ -26,6 +36,12 @@ jobs:
        - name: Run a one-line script
          run: sed '11 c\    CR_BRANCH:${{ github.event.inputs.MANIFEST_BRANCH }}' ./.cirrus.yml
        
+       - name: Run a one-line script
+         run: sed '12 c\    DT_REPO:${{ github.event.inputs.DEVICE_TREE_URL }}' ./.cirrus.yml 
+        
+       - name: Run a one-line script
+         run: sed '14 c\    DT_BRANCH:${{ github.event.inputs.DEVICE_TREE_BRANCH }}' ./.cirrus.yml 
+        
        - name: Run a one-line script
          run: sed '3 c\    CODENAME:sweet' ./.cirrus.yml 
         
