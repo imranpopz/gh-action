@@ -40,19 +40,7 @@ jobs:
        
        - name: Run a one-line script
          run: |
-              sed -i '11 c\    CR_BRANCH: ${{ github.event.inputs.MANIFEST_BRANCH }}' ./.cirrus.yml
-              sed -i '12 c\    DT_REPO: ${{ github.event.inputs.DEVICE_TREE_URL }}' ./.cirrus.yml 
-              sed -i '13 c\    DT_BRANCH: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}' ./.cirrus.yml 
-              sed -i '3 c\    CODENAME: ${{ github.event.inputs.DEVICE_CODENAME }}' ./.cirrus.yml 
-              sed -i '2 c\    OEM: ${{ github.event.inputs.VENDOR_NAME }}' ./.cirrus.yml         
-        
+              df -h
+              
 
-       - name: Commit & Push changes
-         uses: actions-js/push@master
-         with:
-           author_email: imranpopz32@gmail.com
-
-           author_name: imranpopz
-           branch: android-12.1
-           message:  ${{ github.event.inputs.COMMIT_MSG }}
-           github_token: ${{ secrets.TOKEN }}        
+           
