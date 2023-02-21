@@ -29,7 +29,7 @@ on:
         
 jobs:
   PBRP_CI:
-    runs-on: ubuntu-20.04
+    runs-on: jetbrains/teamcity-server
 
     steps:
 
