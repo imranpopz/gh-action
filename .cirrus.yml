@@ -12,7 +12,7 @@ env:
     DT_REPO: https://github.com/nebrassy/device_xiaomi_sweet-TWRP.git
     DT_BRANCH: android-12.1
     CIRRUS_CHANGE_TITLE: Building PithBlack Recovery for ${COMENAME} from ${OEM}
-    CIRRUS_CHANGE_MESSAGE: Building PithBlack Recovery for ${COMENAME} from ${OEM}.
+    CIRRUS_CHANGE_MESSAGE: Building PithBlack Recovery for ${COMENAME} from ${OEM}
     
 task:
   name: "Recovery Build"
